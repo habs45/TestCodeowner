@@ -4,12 +4,6 @@
 
 # Rule extracted from CODEOWNERS
 /**/* @aRc-rAy
-# Rule extracted from apps/CODEOWNERS
-/apps/**/* @anandabhi04
-# Rule extracted from apps/CODEOWNERS
-/apps/**/*.js @aRc-rAy
-# Rule extracted from apps/CODEOWNERS
-/apps/**/*.json @anandabhi04
 # Rule extracted from platform/CODEOWNERS
 /platform/**/* @habs @anandabhi04
 
