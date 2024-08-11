@@ -1,5 +1,4 @@
 name: Generate CODEOWNERS
-
 on:
   pull_request:
     types: [opened, synchronize, reopened]
@@ -23,8 +22,6 @@ jobs:
           codeowners-generator generate
 
       - name: Commit and push CODEOWNERS file
-        uses: EndBug/add-and-commit@v9
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          author_name: github-actions
-          author_email: github-actions@github.com
-          message: "Generate CODEOWNERS file"
+          commit_message: Generate CODEOWNERS file
