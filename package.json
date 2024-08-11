@@ -1,0 +1,22 @@
+{
+  "name": "testcodeowner",
+  "version": "1.0.0",
+  "main": "index.js",
+  "codeowners-generator": {
+    "includes": [
+      "**/CODEOWNERS","!.github/CODEOWNERS"
+    ],
+    "output": ".github/CODEOWNERS",
+    "customRegenerationCommand": "npm run codeowners"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "codeowners": " codeowners-generator generate"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "codeowners-generator": "^2.4.1"
+  }
+}
