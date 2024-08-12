@@ -1,27 +1,15 @@
-name: Generate CODEOWNERS
+name: Lint CODEOWNERS
+
 on:
   pull_request:
-    types: [opened, synchronize, reopened]
 
 jobs:
-  generate-codeowners:
+  codeowners:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Install codeowners-generator
-        run: |
-          npm install -g codeowners-generator
-      - name: Verify installation
-        run: which codeowners-generator 
-    
-      - name: Generate CODEOWNERS file
-        run: |
-          codeowners-generator generate
-
-      - name: Commit and push CODEOWNERS file
-        uses: stefanzweifel/git-auto-commit-action@v5
+      - uses: actions/checkout@v2 # to checkout the code of the repo you want to check the CODEOWNERS from.
+      - name: check codeowners
+        uses: gagoar/codeowners-generator@master
         with:
-          commit_message: Generate CODEOWNERS file
+          use-maintainers: true
+          check: true
