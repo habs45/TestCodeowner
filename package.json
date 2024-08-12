@@ -4,7 +4,7 @@
   "main": "index.js",
   "codeowners-generator": {
     "includes": [
-      "**/CODEOWNERS","!/CODEOWNERS"
+      "**/CODEOWNERS","!CODEOWNERS"
     ],
     "output": "CODEOWNERS",
     "customRegenerationCommand": "npm run codeowners"
