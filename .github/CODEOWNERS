@@ -11,6 +11,6 @@
 # Rule extracted from apps/CODEOWNERS
 /apps/**/*.json @anandabhi04
 # Rule extracted from platform/CODEOWNERS
-/platform/**/* @habs @anandabhi04
+/platform/**/* @anandabhi04
 
 #################################### Generated content - do not edit! ####################################
