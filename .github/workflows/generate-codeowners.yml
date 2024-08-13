@@ -1,7 +1,8 @@
 name: Generate CODEOWNERS
 on:
-  pull_request:
-    types: [opened, synchronize, reopened]
+  push:
+    paths:
+      - '**/CODEOWNERS'
 
 jobs:
   generate-codeowners:
@@ -16,12 +17,11 @@ jobs:
           npm install -g codeowners-generator
       - name: Verify installation
         run: which codeowners-generator 
-    
+
       - name: Generate CODEOWNERS file
         run: |
           codeowners-generator generate
-
       - name: Commit and push CODEOWNERS file
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: Generate CODEOWNERS file
+
