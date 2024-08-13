@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - '**/CODEOWNERS'
+      - '!.github/CODEOWNERS'
 
 jobs:
   generate-codeowners:
